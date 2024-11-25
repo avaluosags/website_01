@@ -1,0 +1,77 @@
+---
+import Button from '../components/Button.astro';
+import H1 from '../components/TextComponents/H1.astro';
+import P from '../components/TextComponents/P.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  linkButton?: string;
+  linkButton2?: string;
+  buttonText: string;
+  buttonText2?: string;
+  iconLeft?: string;
+  iconLeft2?: string;
+  iconRight?: string;
+  iconRight2?: string;
+  heroImagePath: string;
+  heroImageAlt: string;
+}
+
+const {
+  title,
+  description,
+  linkButton,
+  buttonText,
+  iconLeft,
+  iconRight,
+  // Second button
+  linkButton2,
+  buttonText2,
+  iconLeft2,
+  iconRight2,
+  heroImagePath,
+  heroImageAlt,
+} = Astro.props;
+---
+
+<section class="flex flex-col-reverse sm:flex-row items-center xl:gap-x-10 xl:h-screen pt-28 sm:pt-0">
+
+    <div class="xl:w-2/5 xl:min-h-screen">
+        <img
+          class="xl:w-full xl:min-h-screen object-center xl:object-cover"
+          src={heroImagePath}        
+          alt={heroImageAlt}
+        />
+    </div>
+
+    <div class="mt-15 mb-10 xl:w-3/5 px-5 xl:p-20 flex flex-col justify-center gap-4">
+        <H1> <span class="capitalize">{title}</span> </H1>
+        <P> {description} </P>
+        
+        <div class="flex flex-col gap-y-2 xl:flex-row xl:gap-y-0 xl:gap-x-4 mt-1 xl:mt-2">
+            <a href={linkButton}>
+              <Button
+                  size="default"
+                  theme="primary_bg"
+                  text={buttonText}
+                  iconLeft={iconLeft}
+                  iconRight={iconRight}
+                  type="button"
+              />
+            </a>
+            
+            <a href={linkButton2}>
+              <Button
+                  size="default"
+                  theme="secondary-bg"
+                  text={buttonText2}
+                  iconLeft={iconLeft2}
+                  iconRight={iconRight2}
+                  type="button"
+              />
+            </a>
+        </div>
+    </div>
+
+</section>

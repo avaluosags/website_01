@@ -1,0 +1,13 @@
+---
+interface Props {
+  className?: string;
+}
+
+const { 
+  className 
+} = Astro.props;
+---
+
+<h3 class={`font-cardo font-extrabold text-4 xl:text-6 leading-none text-primary_super ${className}`}>
+  <slot />
+</h3>

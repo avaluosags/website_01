@@ -1,0 +1,49 @@
+---
+import Button from './Button.astro';
+import P from './TextComponents/P.astro';
+
+interface Props {
+  logoPath: string;
+  logoAlt: string;
+  buttonHref: string;
+  leftButtonIconPath?: string;
+  rightButtonIconPath?: string;
+  buttonText: string;
+}
+
+const { 
+    logoPath, 
+    leftButtonIconPath,
+    rightButtonIconPath,
+    logoAlt,
+    buttonHref,
+    buttonText
+} = Astro.props;
+---
+
+<nav class="fixed w-screen z-10 h-[8vh] flex flex-row gap-2 justify-between items-center bg-white px-5 xl:px-10 border-b border-primary_super">
+  <!-- Logo -->
+  <div>
+    <a href="/" class="flex gap-x-2 items-center">
+      <img
+        src={logoPath} 
+        class="h-3"
+        alt={logoAlt}
+      />
+      <P> <span>Avaluos Ags</span> <P/>
+    </a>
+  </div>
+
+  <!-- Right side -->
+  <div class="flex flex-row items-center justify-center gap-4">
+    <a href={buttonHref}>
+      <Button
+        size="default"
+        theme="secondary-bg"
+        text={buttonText}
+        iconRight={rightButtonIconPath}
+        iconLeft={leftButtonIconPath}
+      />
+    </a>
+  </div>
+</nav>

@@ -1,0 +1,4 @@
+Sitemap: https://template.com/sitemap.xml
+
+User-agent: *
+Allow: /

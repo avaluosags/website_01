@@ -1,0 +1,106 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../sections/Hero.astro';
+import Services from '../sections/Services.astro';
+import CallToAction from '../sections/CallToAction.astro';
+import Description from '../sections/Description.astro';
+import Footer from '../components/Footer.astro';
+import Navbar from '../components/Navbar.astro';
+import Card from '../components/Card.astro';
+import P from '../components/TextComponents/P.astro';
+---
+
+<Layout title="Avaluos ags | Avaluos Aguascalientes | Peritos Valuadores en Aguascalientes">
+	<main>
+		<Navbar 
+			logoPath='/assets/icons/logo.svg'
+			logoAlt='Avaluos Ags - Logo'
+			buttonHref='tel:4493528326'
+			leftButtonIconPath='/assets/icons/phone-blue.svg'
+			buttonText='4493528326'
+		/>
+		
+		<Hero 
+		title='Empresa Familia Líder en Avalúos Ags desde 2018'
+		description='Somos una empresa con más de 100 años de experiencia en el ramo de la valuación de bienes inmuebles, maquinaria y equipo, así como en la elaboración de estudios de mercado.'
+		linkButton='tel:4493528326'
+		buttonText='Agendar una cita ahora'
+		iconRight='/assets/icons/right-arrow-white.svg'
+		linkButton2='tel:4493528326'
+		buttonText2='Hablar con un ejecutivo'
+		iconRight2='/assets/icons/right-arrow-blue.svg'
+		heroImagePath='/assets/imgs/hero.jpg'	
+		heroImageAlt='Avaluos Ags - Hero Image'
+		/>
+		
+		<Description title="Llevamos Más De 1200 Cocheras Eléctricas De Experiencia">
+			<div class="flex flex-col gap-y-4">
+				<P>Somos los guardianes del garaje, empresa líder en puertas automáticas de tipo industrial y residencial en la laguna (nuestras recomendaciones lo confirman).</P>
+				<P>Contamos con un equipo de técnicos especializados en la instalación, mantenimiento y reparación de cocheras eléctricas, así como en la automatización de portones.</P>
+				<P>En nuestra empresa, la calidad y la satisfacción del cliente son nuestra prioridad, por lo que ofrecemos productos de la más alta calidad y un servicio de primera clase.</P>
+			</div>
+		</Description>
+		
+		<Services title="Llevamos Más De 1200 Cocheras Eléctricas De Experiencia">
+			<div class="flex flex-col gap-y-4">
+				<P>Somos los guardianes del garaje, empresa líder en puertas automáticas de tipo industrial y residencial en la laguna (nuestras recomendaciones lo confirman).</P>
+				<P>Contamos con un equipo de técnicos especializados en la instalación, mantenimiento y reparación de cocheras eléctricas, así como en la automatización de portones.</P>
+				<P>En nuestra empresa, la calidad y la satisfacción del cliente son nuestra prioridad, por lo que ofrecemos productos de la más alta calidad y un servicio de primera clase.</P>
+			</div>	
+		</Services>
+
+		<div class="flex flex-col pb-5 xl:pb-40 gap-y-4 xl:gap-y-0 xl:px-20 xl:flex-row xl:gap-x-6 items-start">
+			<Card
+				title="Avalúo INFONAVITS"
+				description="¿Necesitas un avalúo para tu crédito INFONAVIT? Garantizamos un proceso ágil y profesional para que avances con confianza en la compra de tu hogar."
+				imageSrc="/assets/imgs/avaluos_infonavit.png"
+				imageAlt="Avaluos Ags - Avaluo INFONAVIT Image"
+				imageWidth="w-auto"
+				buttonHref="tel:4493528326"
+				buttonText="Agenda tu avalúo ahora"
+				buttonIcon="/assets/icons/right-arrow-white.svg"
+			/>
+
+			<Card
+				title="Avalúo Municipal Ags"
+				description="Especialistas en avalúos municipales en Aguascalientes. Asegúrate de cumplir con todas las regulaciones con un servicio rápido y confiable."
+				imageSrc="/assets/imgs/avaluos_aguascalientes.png"
+				imageAlt="Avaluos Ags - Avaluo Municipal Ags Image"
+				imageWidth="w-32 xl:w-36"
+				buttonHref="tel:4493528326"
+				buttonText="Programa tu avalúo ahora"
+				buttonIcon="/assets/icons/right-arrow-white.svg"
+			/>
+
+			<Card
+				title="Estimación de Valor - Conoce el Precio Real de tu Propiedad"
+				description="¿Vendes o compras una propiedad? Nuestra estimación precisa de valor te asegura obtener el mejor precio en el mercado."
+				imageSrc="/assets/imgs/estimacion_de_valor.png"
+				imageAlt="Estimacion de valores de casa - Avaluos perito valuadores Image"
+				imageWidth="w-32 xl:w-36"
+				buttonHref="tel:4493528326"
+				buttonText="Hablar con un ejecutivo"
+				buttonIcon="/assets/icons/right-arrow-white.svg"
+			/>
+
+		</div>
+		
+		<CallToAction
+		 	title='¿Necesitas un avalúo?'
+			subtitle='Contáctanos para recibir una cotización gratuita y sin compromiso.'
+			buttonHref='tel:4493528326'
+			buttonText='Llama ahora: 4493528326'
+			buttonPhone='4493528326'
+			buttonIcon='/assets/icons/right-arrow-white.svg'						
+		/>
+		
+		<Footer
+			phone="4493528326",
+			hours="Lunes a Sábado de 9:00 a 18:00.",
+			address="Calle 57 #311, Col. del Trabajo C.P. 20180, Aguascalientes, Ags.",
+			logoSrc="/assets/icons/logo.svg",
+			logoAlt="Avaluos Ags - Logo",
+			description="Avaluos en aguascalientes – Avaluos AGS ® | Desde 2009."
+		/>
+	</main>
+</Layout>

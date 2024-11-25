@@ -1,0 +1,58 @@
+---
+import P from "./TextComponents/P.astro";
+
+interface FooterProps {
+  phone: string;
+  hours: string;
+  address: string;
+  logoSrc?: string;
+  logoAlt: string;
+  description: string;
+}
+
+const {
+  phone,
+  hours,
+  address,
+  logoSrc,
+  logoAlt,
+  description,
+} = Astro.props;
+---
+
+<footer
+  class="bg-primary_bg pt-10 pb-14 xl:mb-0 xl:py-20 px-8 xl:px-56 flex flex-col gap-y-2 xl:gap-x-12 xl:flex-row xl:items-center"
+>
+  <!-- Teléfono -->
+  <div>
+    <a href={`tel:${phone}`}>    
+        <P>
+            <span class="font-bold">Teléfono:</span>            
+            <span class="underline xl:text-3">{phone}</span>
+        </P>
+    </a>
+  </div>
+
+  <!-- Horarios -->
+  <div>
+    <P>
+        <span class="font-bold">Horarios:</span>
+        {hours}
+    </P>
+  </div>
+
+  <!-- Dirección -->
+  <div>
+    <P>
+        <span class="font-bold">Dirección:</span>
+        {address}
+    </P>
+  </div>
+
+  <!-- Logo y descripción -->
+  <div class="flex flex-row items-center gap-x-3 md:gap-x-6">
+    <img class="h-5 md:h-10" src={logoSrc} alt={logoAlt} />
+    <P><span class="font-bold">{description}</span></P>
+  </div>
+  
+</footer>

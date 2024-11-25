@@ -1,0 +1,54 @@
+---
+import Button from '../components/Button.astro';
+import H3 from './TextComponents/H3.astro';
+import P from './TextComponents/P.astro';
+
+interface Props {
+  imageSrc?: string;
+  imageAlt?: string;
+  imageWidth?: string;
+  title: string;
+  description: string;
+  buttonHref: string;
+  buttonText: string;
+  buttonIcon?: string;
+  className?: string; // Para personalización adicional
+}
+
+const {
+  imageSrc,
+  imageAlt,
+  imageWidth,
+  title,
+  description,
+  buttonHref,
+  buttonText,
+  buttonIcon,
+  className
+} = Astro.props;
+---
+
+<div class={`xl:w-1/3 h-[50vh] xl:h-[75vh] flex flex-col p-5 xl:p-10 gap-y-3 xl:gap-y-6 justify-center items-center border border-primary_super ${className}`}>
+  <!-- Image -->
+  <img
+    alt={imageAlt}
+    class={imageWidth}
+    src={imageSrc}
+  />
+
+  <!-- Title and Description -->
+  <div class="flex flex-col items-center text-center gap-y-2">
+    <H3>{title}</H3>
+    <P>{description}</p>
+  </div>
+
+  <!-- Button -->
+  <a href={buttonHref}>
+    <Button
+      size="default"
+      theme="primary_bg"
+      text={buttonText}
+      iconRight={buttonIcon}
+    />
+  </a>
+</div>
