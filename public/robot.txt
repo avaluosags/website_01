@@ -1,4 +1,4 @@
-Sitemap: https://template.com/sitemap.xml
+Sitemap: https://avaluosags.com/sitemap.xml
 
 User-agent: *
 Allow: /

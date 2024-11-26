@@ -8,6 +8,8 @@ import Footer from '../components/Footer.astro';
 import Navbar from '../components/Navbar.astro';
 import Card from '../components/Card.astro';
 import P from '../components/TextComponents/P.astro';
+import TextContainer from '../layouts/TextContainer.astro';
+import H2 from '../components/TextComponents/H2.astro';
 ---
 
 <Layout title="Avaluos ags | Avaluos Aguascalientes | Peritos Valuadores en Aguascalientes">
@@ -21,8 +23,8 @@ import P from '../components/TextComponents/P.astro';
 		/>
 		
 		<Hero 
-		title='Empresa Familia Líder en Avalúos Ags desde 2018'
-		description='Somos una empresa con más de 100 años de experiencia en el ramo de la valuación de bienes inmuebles, maquinaria y equipo, así como en la elaboración de estudios de mercado.'
+		title='Empresa Avalúos Ags Líder en avaluos en aguascalientes desde 2009'
+		description='Somos un grupo de expertos peritos valuadores en Aguascalientes, especializados en avalúos de casas, bienes inmuebles y proyectos para INFONAVIT.'
 		linkButton='tel:4493528326'
 		buttonText='Agendar una cita ahora'
 		iconRight='/assets/icons/right-arrow-white.svg'
@@ -32,26 +34,36 @@ import P from '../components/TextComponents/P.astro';
 		heroImagePath='/assets/imgs/hero.jpg'	
 		heroImageAlt='Avaluos Ags - Hero Image'
 		/>
-		
-		<Description title="Llevamos Más De 1200 Cocheras Eléctricas De Experiencia">
-			<div class="flex flex-col gap-y-4">
-				<P>Somos los guardianes del garaje, empresa líder en puertas automáticas de tipo industrial y residencial en la laguna (nuestras recomendaciones lo confirman).</P>
-				<P>Contamos con un equipo de técnicos especializados en la instalación, mantenimiento y reparación de cocheras eléctricas, así como en la automatización de portones.</P>
-				<P>En nuestra empresa, la calidad y la satisfacción del cliente son nuestra prioridad, por lo que ofrecemos productos de la más alta calidad y un servicio de primera clase.</P>
+
+		<TextContainer className='bg-primary_bg'>			
+			<div class="md:px-72 lg:px-20 flex flex-col gap-y-8">
+				<H2 className='capitalize'>Contamos con Más De 4000 Avaluos en aguascalientes que  nos Respaldan</H2>
+
+				<div class="flex flex-col gap-y-4">
+					<P>Somos peritos valuadores en Aguascalientes, especializados en avalúos de casas, bienes inmuebles, terrenos y proyectos para Infonavit. Contamos con un equipo experto en valuación en Aguascalientes, consultoría inmobiliaria, análisis de riesgos y servicios relacionados con el mercado inmobiliario.</P>  
+					<P>Con miles de clientes satisfechos, somos la opción líder en avalúos en Aguascalientes, ideales para quienes necesitan determinar el valor de una propiedad para compra, venta, hipotecas o inversiones. Garantizamos confianza, precisión y resultados respaldados por nuestra experiencia.</P>  
+					<P>Ofrecemos soluciones personalizadas para particulares, empresas y desarrolladores, atendiendo las necesidades de valuadores de casas en Aguascalientes y proyectos comerciales. Nos especializamos en cumplir los estándares más exigentes en avalúos ags inmobiliarios.</P>  
+					<P>Si buscas peritos valuadores en Aguascalientes que combine conocimiento en avaluos, ética profesional y servicio de excelencia, somos tu mejor opción. Con nosotros, cada avalúo de casas es una herramienta confiable para tomar decisiones inteligentes.</P>  
+				</div>
 			</div>
-		</Description>
+		</TextContainer>
 		
-		<Services title="Llevamos Más De 1200 Cocheras Eléctricas De Experiencia">
-			<div class="flex flex-col gap-y-4">
-				<P>Somos los guardianes del garaje, empresa líder en puertas automáticas de tipo industrial y residencial en la laguna (nuestras recomendaciones lo confirman).</P>
-				<P>Contamos con un equipo de técnicos especializados en la instalación, mantenimiento y reparación de cocheras eléctricas, así como en la automatización de portones.</P>
-				<P>En nuestra empresa, la calidad y la satisfacción del cliente son nuestra prioridad, por lo que ofrecemos productos de la más alta calidad y un servicio de primera clase.</P>
-			</div>	
-		</Services>
+		<TextContainer className='bg-white'>
+			<div class="md:px-72 lg:px-20 flex flex-col gap-y-8">
+				<H2 className='capitalize'>Servicios de avaluos ags que ofrecemos hecho por peritos valuadores en aguascalientes</H2>
+
+				<div class="flex flex-col gap-y-4">
+					<P>Ofrecemos avalúos en Aguascalientes para determinar el valor real de casas, terrenos y propiedades comerciales, con un enfoque en precisión y confiabilidad.</P>
+					<P>Nuestros peritos valuadores en Aguascalientes están capacitados para atender proyectos Infonavit, análisis de mercado y evaluación de riesgos, adaptándose a cada cliente.</P>
+					<P>Con una trayectoria respaldada por cientos de avalúos, brindamos soluciones efectivas para quienes buscan vender, comprar o financiar bienes inmuebles en Aguascalientes.</P>
+					<P>Confía en nuestros servicios de valuación en Aguascalientes, diseñados para garantizar decisiones informadas y resultados de alto impacto.</P>
+				</div>	
+			</div>
+		</TextContainer>
 
 		<div class="flex flex-col pb-5 xl:pb-40 gap-y-4 xl:gap-y-0 xl:px-20 xl:flex-row xl:gap-x-6 items-start">
 			<Card
-				title="Avalúo INFONAVITS"
+				title="Avalúo INFONAVIT"
 				description="¿Necesitas un avalúo para tu crédito INFONAVIT? Garantizamos un proceso ágil y profesional para que avances con confianza en la compra de tu hogar."
 				imageSrc="/assets/imgs/avaluos_infonavit.png"
 				imageAlt="Avaluos Ags - Avaluo INFONAVIT Image"
@@ -86,8 +98,8 @@ import P from '../components/TextComponents/P.astro';
 		</div>
 		
 		<CallToAction
-		 	title='¿Necesitas un avalúo?'
-			subtitle='Contáctanos para recibir una cotización gratuita y sin compromiso.'
+		 	title='¿Necesitas un Avalúo en Aguascalientes? ¡Contáctanos Hoy!'
+			subtitle='Somos peritos valuadores en Aguascalientes, especializados en avalúos de casas, terrenos y proyectos Infonavit.'
 			buttonHref='tel:4493528326'
 			buttonText='Llama ahora: 4493528326'
 			buttonPhone='4493528326'
@@ -96,7 +108,7 @@ import P from '../components/TextComponents/P.astro';
 		
 		<Footer
 			phone="4493528326",
-			hours="Lunes a Sábado de 9:00 a 18:00.",
+			hours="Lunes a Viernes de 10:00 a 18:00 - Sabados de 10:00 a 14:00",
 			address="Calle 57 #311, Col. del Trabajo C.P. 20180, Aguascalientes, Ags.",
 			logoSrc="/assets/icons/logo.svg",
 			logoAlt="Avaluos Ags - Logo",
